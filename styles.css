@@ -1,0 +1,29 @@
+body {
+    font-family: 'Audiowide', serif;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+img {
+    width: 330px;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+
+}
+
+button {
+    height: 40px;
+}
+
+.continue {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+
