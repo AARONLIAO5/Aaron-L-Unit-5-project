@@ -1,0 +1,99 @@
+<!DOCTYPE html> <html><head>
+        <title>Aaron L. Unit 5 project</title>
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+<style>
+    body {
+  font-family: "Audiowide", sans-serif;
+}
+</style>
+<style>body {
+    font-family: 'Audiowide', serif;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+img {
+    width: 330px;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+
+}
+
+button {
+    height: 40px;
+}
+
+.continue {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+
+</style></head>
+    
+    <body>
+        <div class="title"> </div>
+
+        <h1>Would you survive the apocolypse?</h1>
+
+
+        <div class="question1">
+            <h4>How many stars are in the sky?</h4>
+
+            <img alt="star" src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3RhcnJ5JTIwc2t5fGVufDB8fDB8fA%3D%3D&amp;w=1000&amp;q=80">
+            <div> <input class="star-input" placeholder="answer">
+
+            </div>
+            <div class="question2">
+                <h4>Are you willing to sacrifice your friends for your own well being?
+                </h4>
+                <img alt="person holding hand out to the drowing  person" src="https://thumbs.dreamstime.com/b/sinking-saving-man-offers-helping-hand-conceptual-scene-sinking-saving-man-offers-helping-hand-120779572.jpg">
+     <input class="userInput" placeholder="answer">
+              
+
+            </div>
+            <button class="button">Submit</button>
+            <div class="message"></div>
+        </div>
+
+     <div>   </div>
+      
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var result1 = document.querySelector(".result1");
+var result2 = document.querySelector(".result2");
+var result3 = document.querySelector(".result3");
+var result4 = document.querySelector(".result5");
+var question1 = document.querySelector(".question1");
+var question2 = document.querySelector(".question2");
+var button = document.querySelector("button");
+
+button.onclick = function () {
+  var answer1 = document.querySelector(".star-input").value;
+  var answer2 = document.querySelector(".userInput").value;
+  var message = document.querySelector(".message");
+
+  if (answer1 <= 25 && answer2 === "yes") {
+    message.innerHTML = "You died!";
+  } else if (answer1 <= 25 && answer2 === "no") {
+    message.innerHTML = " You Died!";
+  } else if (answer1 >= 26 && answer2 === "yes") {
+    message.innerHTML = " You have unforunatly died";
+  } else if (answer1 >= 26 && answer2 === "no") {
+    message.innerHTML = " You Survive";
+  }
+
+  if (answer2 === "maybe") {
+    message.innerHTML = "Hesitation is not good";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbInJlc3VsdDEiLCJkb2N1bWVudCIsInF1ZXJ5U2VsZWN0b3IiLCJyZXN1bHQyIiwicmVzdWx0MyIsInJlc3VsdDQiLCJxdWVzdGlvbjEiLCJxdWVzdGlvbjIiLCJidXR0b24iLCJvbmNsaWNrIiwiYW5zd2VyMSIsInZhbHVlIiwiYW5zd2VyMiIsIm1lc3NhZ2UiLCJpbm5lckhUTUwiXSwibWFwcGluZ3MiOiJBQUFBLElBQUlBLE9BQU8sR0FBR0MsUUFBUSxDQUFDQyxhQUFULENBQXVCLFVBQXZCLENBQWQ7QUFDQSxJQUFJQyxPQUFPLEdBQUdGLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixVQUF2QixDQUFkO0FBQ0EsSUFBSUUsT0FBTyxHQUFHSCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsVUFBdkIsQ0FBZDtBQUNBLElBQUlHLE9BQU8sR0FBR0osUUFBUSxDQUFDQyxhQUFULENBQXVCLFVBQXZCLENBQWQ7QUFDQSxJQUFJSSxTQUFTLEdBQUdMLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixZQUF2QixDQUFoQjtBQUNBLElBQUlLLFNBQVMsR0FBR04sUUFBUSxDQUFDQyxhQUFULENBQXVCLFlBQXZCLENBQWhCO0FBQ0EsSUFBSU0sTUFBTSxHQUFHUCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsUUFBdkIsQ0FBYjs7QUFJQU0sTUFBTSxDQUFDQyxPQUFQLEdBQWlCLFlBQVc7QUFDdkIsTUFBSUMsT0FBTyxHQUFDVCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsYUFBdkIsRUFBc0NTLEtBQWxEO0FBQ0QsTUFBSUMsT0FBTyxHQUFDWCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsWUFBdkIsRUFBcUNTLEtBQWpEO0FBQ0EsTUFBSUUsT0FBTyxHQUFHWixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsVUFBdkIsQ0FBZDs7QUFHQSxNQUFJUSxPQUFPLElBQUcsRUFBVixJQUFpQkUsT0FBTyxLQUFLLEtBQWpDLEVBQXdDO0FBQUVDLElBQUFBLE9BQU8sQ0FBQ0MsU0FBUixHQUFtQixXQUFuQjtBQUFnQyxHQUExRSxNQUVDLElBQUlKLE9BQU8sSUFBSSxFQUFYLElBQWlCRSxPQUFPLEtBQUksSUFBaEMsRUFBc0M7QUFBRUMsSUFBQUEsT0FBTyxDQUFDQyxTQUFSLEdBQW9CLFlBQXBCO0FBQWtDLEdBQTFFLE1BRUQsSUFBSUosT0FBTyxJQUFHLEVBQVYsSUFBZ0JFLE9BQU8sS0FBRyxLQUE5QixFQUFzQztBQUFFQyxJQUFBQSxPQUFPLENBQUNDLFNBQVIsR0FBb0IsNEJBQXBCO0FBQWtELEdBQTFGLE1BRUEsSUFBSUosT0FBTyxJQUFHLEVBQVYsSUFBZ0JFLE9BQU8sS0FBSSxJQUEvQixFQUFxQztBQUFFQyxJQUFBQSxPQUFPLENBQUNDLFNBQVIsR0FBb0IsY0FBcEI7QUFBb0M7O0FBQzNFLE1BQUlGLE9BQU8sS0FBSyxPQUFoQixFQUF5QjtBQUFFQyxJQUFBQSxPQUFPLENBQUNDLFNBQVIsR0FBbUIsd0JBQW5CO0FBQTZDO0FBQzNFLENBZEQiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgcmVzdWx0MSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmVzdWx0MVwiKTtcbmxldCByZXN1bHQyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHQyXCIpO1xubGV0IHJlc3VsdDMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdDNcIik7XG5sZXQgcmVzdWx0NCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmVzdWx0NVwiKTtcbmxldCBxdWVzdGlvbjEgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnF1ZXN0aW9uMVwiKTtcbmxldCBxdWVzdGlvbjIgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnF1ZXN0aW9uMlwiKTtcbmxldCBidXR0b24gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiYnV0dG9uXCIpO1xuXG4gIFxuXG5idXR0b24ub25jbGljayA9IGZ1bmN0aW9uKCkge1xuICAgICBsZXQgYW5zd2VyMT1kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnN0YXItaW5wdXRcIikudmFsdWU7XG4gICAgbGV0IGFuc3dlcjI9ZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi51c2VySW5wdXRcIikudmFsdWU7XG4gICAgbGV0IG1lc3NhZ2UgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLm1lc3NhZ2VcIik7ICBcbiAgICBcbiAgICBcbiAgICBpZiAoYW5zd2VyMSA8PTI1ICAmJiBhbnN3ZXIyID09PSBcInllc1wiKSB7IG1lc3NhZ2UuaW5uZXJIVE1MPSBcIllvdSBkaWVkIVwiO30gXG4gZWxzZVxuICAgICBpZiAoYW5zd2VyMSA8PSAyNSAmJiBhbnN3ZXIyID09PVwibm9cIikgeyBtZXNzYWdlLmlubmVySFRNTCA9IFwiIFlvdSBEaWVkIVwiO31cbmVsc2VcbiAgICBpZiAoYW5zd2VyMSA+PTI2ICYmIGFuc3dlcjI9PT1cInllc1wiICkgeyBtZXNzYWdlLmlubmVySFRNTCA9IFwiIFlvdSBoYXZlIHVuZm9ydW5hdGx5IGRpZWRcIjt9XG5lbHNlXG4gICAgaWYgKGFuc3dlcjEgPj0yNiAmJiBhbnN3ZXIyID09PVwibm9cIikgeyBtZXNzYWdlLmlubmVySFRNTCA9IFwiIFlvdSBTdXJ2aXZlXCI7fSBcbiAgICBpZiAoYW5zd2VyMiA9PT0gXCJtYXliZVwiKSB7IG1lc3NhZ2UuaW5uZXJIVE1MPSBcIkhlc2l0YXRpb24gaXMgbm90IGdvb2RcIjt9XG59O1xuICBcbiJdfQ==</script></body></html>
